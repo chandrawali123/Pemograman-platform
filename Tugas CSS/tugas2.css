@@ -1,0 +1,35 @@
+h1,h2{
+    font-weight: normal;
+    font-variant: normal;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: justify;
+}
+body{
+    background-image: url(R.jpg);
+}
+
+
+
+
+h3{
+    color: brown;
+}
+
+.satu{
+    width: 50%;
+    height: 50%;
+    overflow: auto;
+    color: brown;
+}
+
+/*mengubah warna, panjang dan tinggi dari h1 dan h2 (judul)*/
+.one{
+    width: 100%;
+    height: 100%;
+    color: brown;
+    background-color: rgb(149, 245, 245);
+}

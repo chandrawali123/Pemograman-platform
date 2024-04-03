@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Input Form</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-image: url('R.jpg'); /* Ganti 'background.jpg' dengan path gambar kamu */
+            background-size: cover; /* Pastikan gambar menutupi seluruh halaman */
+            background-position: center; /* Pusatkan gambar */
+        }
+        form {
+            border: 1px solid #ccc;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            background: #ffffff; /* Background putih untuk form supaya teks terbaca */
+        }
+        label, a {
+            font-size: 18px;
+        }
+        input[type=text], input[type=number] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0 16px;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        a {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        a:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Form Input</h2>
+
+<!-- Form untuk input data -->
+<form id="inputForm">
+    <label for="nama">Nama:</label><br>
+    <input type="text" id="nama" name="nama" required><br>
+    <label for="jumlahPilihan">Jumlah Pilihan:</label><br>
+    <input type="number" id="jumlahPilihan" name="jumlahPilihan" required><br><br>
+    <!-- Hyperlink digunakan sebagai "tombol" dengan JavaScript untuk handle klik -->
+    <a href="#" onclick="submitData()">OK</a>
+</form> 
+
+<script>
+function submitData() {
+    event.preventDefault();
+
+    var nama = document.getElementById('nama').value;
+    var jumlahPilihan = document.getElementById('jumlahPilihan').value;
+
+    if(nama === "" || jumlahPilihan === "") {
+        alert("Silakan isi semua field.");
+        return;
+    }
+
+    console.log("Nama: " + nama + ", Jumlah Pilihan: " + jumlahPilihan);
+    alert("Data tersimpan: \nNama: " + nama + "\nJumlah Pilihan: " + jumlahPilihan);
+}
+</script>
+
+</body>
+</html>
